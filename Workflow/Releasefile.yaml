@@ -1,6 +1,6 @@
 # Exported from:        http://localhost:5516/
 # Release version:      23.1.0-beta.6
-# Date created:         Thu Jan 19 15:04:32 UTC 2023
+# Date created:         Thu Jan 19 15:07:49 UTC 2023
 
 ---
 apiVersion: xl-release/v1
@@ -17,6 +17,8 @@ spec:
       type: xlrelease.Task
     - name: Install ArgoCD
       type: xlrelease.Task
+    - name: Create ArgoCD Namespace
+      type: kubernetes.CreateNamespace
     color: '#3d6c9e'
   riskProfile: Default risk profile
 - notifications:
