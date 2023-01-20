@@ -1,15 +1,16 @@
 # Exported from:        http://localhost:5516/
 # Release version:      23.1.0-beta.6
-# Date created:         Thu Jan 19 15:07:49 UTC 2023
+# Date created:         Fri Jan 20 13:06:43 UTC 2023
 
 ---
 apiVersion: xl-release/v1
 kind: Templates
 metadata:
-  home: Workflow
+  home: Workflows
 spec:
 - template: Onboard Application with ArgoCD
   scheduledStartDate: 2023-01-19T14:00:00Z
+  dueDate: 2023-01-19T15:00:00Z
   phases:
   - phase: Onboard
     tasks:
@@ -19,6 +20,15 @@ spec:
       type: xlrelease.Task
     - name: Create ArgoCD Namespace
       type: kubernetes.CreateNamespace
+    color: '#3d6c9e'
+  riskProfile: Default risk profile
+- template: demo22
+  scheduledStartDate: 2023-01-20T14:00:00Z
+  phases:
+  - phase: second template
+    tasks:
+    - name: test second template
+      type: xlrelease.Task
     color: '#3d6c9e'
   riskProfile: Default risk profile
 - notifications:
