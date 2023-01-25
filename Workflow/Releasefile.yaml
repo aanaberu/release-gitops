@@ -1,13 +1,21 @@
 # Exported from:        http://localhost:5516/
 # Release version:      23.1.0-beta.6
-# Date created:         Fri Jan 20 13:06:43 UTC 2023
+# Date created:         Wed Jan 25 16:54:52 UTC 2023
 
 ---
 apiVersion: xl-release/v1
 kind: Templates
 metadata:
-  home: Workflows
+  home: Workflow-team1
 spec:
+- template: Deploy to Lambda
+  scheduledStartDate: 2023-01-25T14:00:00Z
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: Test Lambda Deployment
+      type: xlrelease.Task
+  riskProfile: Default risk profile
 - template: Onboard Application with ArgoCD
   scheduledStartDate: 2023-01-19T14:00:00Z
   dueDate: 2023-01-19T15:00:00Z
@@ -24,6 +32,7 @@ spec:
   riskProfile: Default risk profile
 - template: demo22
   scheduledStartDate: 2023-01-20T14:00:00Z
+  dueDate: 2023-01-20T15:00:00Z
   phases:
   - phase: second template
     tasks:
