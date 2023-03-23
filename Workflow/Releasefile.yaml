@@ -13,7 +13,7 @@ spec:
   phases:
   - phase: New Phase
     tasks:
-    - name: Test Lambda Deployment
+    - name: Test Lambda Deployment2
       type: xlrelease.Task
   riskProfile: Default risk profile
 - template: Onboard Application with ArgoCD
