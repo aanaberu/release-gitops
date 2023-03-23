@@ -22,7 +22,7 @@ spec:
   phases:
   - phase: Onboard
     tasks:
-    - name: Onboard Application
+    - name: Onboard Application1
       type: xlrelease.Task
     - name: Install ArgoCD
       type: xlrelease.Task
